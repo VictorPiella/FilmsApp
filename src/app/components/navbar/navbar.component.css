@@ -1,0 +1,27 @@
+.container {
+    padding: 30px 20px;
+    position: relative;
+}
+
+nav {
+    border-right: 1px solid #e8e8e8;
+    position: fixed;
+    height: 90%;
+    width: 20%;
+}
+
+.nav-link {
+    float: left;
+    padding: 5px 10px;
+    margin: 5px;
+    display: inline-block;
+    clear: both;
+    border-radius: 5px;
+    color: #e8e8e8;
+    transition: all .5s;
+}
+
+.nav-link:hover {
+    background-color: yellow;
+    color: black;
+}
