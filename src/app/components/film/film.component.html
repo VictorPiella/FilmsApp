@@ -1,12 +1,28 @@
-<div class="row" *ngIf=film>
+<div class="row p-5" *ngIf=film>
 
 
 
     <div class="film col-md-6">
         <img src="{{ film | filmImage }}" class="filmImage" alt="...">
     </div>
-    <div class="filmInfo">
-        <p class="card-title">{{ film.original_title }}
-            <p>
+    <div class="filmInfo col-md-6 p-3">
+        <h1 class="card-title">{{ film.original_title }}</h1>
+        <div class="card-info">
+            <span *ngFor="let genres of film.genres">
+                {{genres.name}}, 
+            </span>{{ film.release_date | date:"dd/MM/yyyy"}}
+            <span class="card-punt btn btn-outline-warning"> {{ film.vote_average }} / 10</span>
+        </div>
+        <p class="card-link mt-2" *ngIf=film.homepage>
+            <a href="{{ film.homepage }}" target="_blank">Official Site</a>
+        </p>
+
+        <p class="card-text">{{ film.overview }}</p>
+        <a href="https://www.imdb.com/title/{{ film.imdb_id }}" target="_blank">
+            <div class="card-imdb">
+                <i class="fab fa-imdb fa-2x"></i> View on IMDb
+            </div>
+        </a>
+
     </div>
 </div>

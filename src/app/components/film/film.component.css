@@ -1,0 +1,35 @@
+    .filmInfo {
+        color: white;
+        transition: all .5s;
+    }
+    
+    .card-info {
+        color: #808080;
+    }
+    
+    a {
+        color: yellow;
+        text-decoration: underline;
+        transition: all .5s;
+    }
+    
+    a:hover {
+        opacity: .5;
+    }
+    
+    .card-imdb {
+        padding: 10px;
+        background-color: yellow;
+        border-radius: 6px;
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .card-punt {
+        padding: 5px 10px;
+        background-color: yellow;
+        border-radius: 6px;
+        display: inline-block;
+        color: black;
+    }

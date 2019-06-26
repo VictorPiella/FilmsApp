@@ -19,3 +19,13 @@ body {
     -ms-filter: blur(10px);
     filter: blur(10px);
 }
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
