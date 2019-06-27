@@ -10,6 +10,8 @@ export class PeliculasService {
   private apikey = 'b495508822123fbd610dda736b801764';
   private urlMoviedb = 'https://api.themoviedb.org/3';
 
+  filmSearch: any = [];
+
   constructor( private http: HttpClient) { }
 
 
@@ -32,6 +34,11 @@ export class PeliculasService {
      return this.http.jsonp( url , 'callback');
   }
 
+  searchFilm(search: string) {
+    const url = `${this.urlMoviedb}/search/movie?api_key=${ this.apikey }&language=es&query=${search}`;
+    this.filmSearch = this.http.jsonp( url , 'callback');
+     return this.filmSearch;
+  }
   getFilm(id: string) {
     const url = `${this.urlMoviedb}/movie/${id}?api_key=${ this.apikey }`;
      return this.http.jsonp( url , 'callback');
