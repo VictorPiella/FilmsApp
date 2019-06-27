@@ -10,6 +10,9 @@ import { HomeComponent } from './components/home/home.component';
 import { FilmComponent } from './components/film/film.component';
 import { appRouting } from './app.routes';
 import { FilmImagePipe } from './pipes/film-image.pipe';
+import { SearchComponent } from './components/search/search.component';
+import { FilmlistComponent } from './components/filmlist/filmlist.component';
+import { PopularComponent } from './components/popular/popular.component';
 
 
 @NgModule({
@@ -18,7 +21,10 @@ import { FilmImagePipe } from './pipes/film-image.pipe';
     NavbarComponent,
     HomeComponent,
     FilmComponent,
-    FilmImagePipe
+    FilmImagePipe,
+    SearchComponent,
+    FilmlistComponent,
+    PopularComponent
   ],
   imports: [
     BrowserModule,
