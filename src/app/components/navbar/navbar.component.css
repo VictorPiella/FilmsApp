@@ -6,7 +6,7 @@
 nav {
     border-right: 1px solid #e8e8e8;
     position: fixed;
-    height: 90%;
+    height: calc(100% - 60px);
     width: 20%;
 }
 
