@@ -1,0 +1,11 @@
+<div class="row">
+
+    <div class="film col-md-3  pb-3" *ngFor="let film of films" [routerLink]="['/film',film.id, 'home']">
+        <img src="{{ film | filmImage }}" class="filmImage" alt="...">
+        <div class="filmInfo mt-2">
+            <p class="card-title">{{ film.original_title }}
+                <p>
+        </div>
+    </div>
+
+</div>
