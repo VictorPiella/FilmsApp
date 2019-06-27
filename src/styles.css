@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
 body {
     background-color: black;
     font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 .background-image {
