@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
 
     this._ps.getPopulares()
     .subscribe( data => {
-      console.log(data);
       this.films = data['results'];
     });
 
