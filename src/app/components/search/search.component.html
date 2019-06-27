@@ -1,0 +1,12 @@
+<div class="container main-container mb-3">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="formgroup">
+                <label>Search:</label>
+                <input [(ngModel)]="search" (keyup.enter)="searchFilm()" name="buscar" type="text" placeholder="Type some title ...">
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-filmlist [films]=films></app-filmlist>
