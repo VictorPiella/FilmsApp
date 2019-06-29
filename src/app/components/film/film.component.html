@@ -2,10 +2,10 @@
 
 
 
-    <div class="film col-md-6">
+    <div class="film col-md-6 col-sm-12">
         <img src="{{ film | filmImage }}" class="filmImage" alt="...">
     </div>
-    <div class="filmInfo col-md-6 p-3">
+    <div class="filmInfo col-md-6 col-sm-12 p-3">
         <h1 class="card-title">{{ film.original_title }}</h1>
         <div class="card-info">
             <span *ngFor="let genres of film.genres">

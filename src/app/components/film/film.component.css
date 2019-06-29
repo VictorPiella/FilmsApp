@@ -1,3 +1,7 @@
+    .filmImage {
+        width: 100%
+    }
+    
     .filmInfo {
         color: white;
         transition: all .5s;
