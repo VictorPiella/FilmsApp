@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class PeliculasService {
+export class FilmService {
 
   private apikey = 'b495508822123fbd610dda736b801764';
   private urlMoviedb = 'https://api.themoviedb.org/3';
@@ -15,7 +15,7 @@ export class PeliculasService {
   constructor( private http: HttpClient) { }
 
 
-  getCartelera() {
+  getBillboard() {
 
     const sinceDate = new Date();
     const toDate = new Date();
@@ -29,7 +29,7 @@ export class PeliculasService {
 
     return this.http.jsonp( url , 'callback');
   }
-  getPopulares() {
+  getPopulars() {
     const url = `${this.urlMoviedb}/discover/movie?sort_by=popularity.desc&api_key=${ this.apikey }&languges=es`;
      return this.http.jsonp( url , 'callback');
   }

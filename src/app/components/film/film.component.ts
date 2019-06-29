@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PeliculasService } from '../../service/peliculas.service';
+import { FilmService } from '../../service/film.service';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -14,7 +14,7 @@ export class FilmComponent implements OnInit {
 
   film: any;
 
-  constructor(public _ps: PeliculasService,
+  constructor(public _ps: FilmService,
               public route: ActivatedRoute) {
 
     this.route.params.subscribe( param => {

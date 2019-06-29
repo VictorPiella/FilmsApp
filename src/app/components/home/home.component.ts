@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { PeliculasService } from '../../service/peliculas.service';
+import { FilmService } from '../../service/film.service';
 import { ActivatedRoute } from "@angular/router";
 
 
@@ -13,10 +13,10 @@ export class HomeComponent implements OnInit {
 
   films: any;
 
-  constructor(public _ps: PeliculasService,
+  constructor(public _fs: FilmService,
               public route: ActivatedRoute) {
 
-    this._ps.getPopulares()
+    this._fs.getBillboard()
     .subscribe( data => {
       this.films = data['results'];
     });

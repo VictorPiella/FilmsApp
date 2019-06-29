@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PeliculasService } from '../../service/peliculas.service';
+import { FilmService } from '../../service/film.service';
 
 @Component({
   selector: 'app-search',
@@ -10,7 +10,7 @@ export class SearchComponent implements OnInit {
 
   search: '';
   films: any;
-  constructor(public _ps: PeliculasService) { }
+  constructor(public _fs: FilmService) { }
 
   ngOnInit() {
   }
@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit {
     if (this.search.length === 0) {
       return;
     }
-    this._ps.searchFilm(this.search)
+    this._fs.searchFilm(this.search)
     .subscribe( data => {
       this.films = data['results'];
     });
